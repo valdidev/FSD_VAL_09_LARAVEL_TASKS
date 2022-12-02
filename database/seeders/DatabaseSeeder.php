@@ -20,5 +20,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+        // throwing multiple seeds at once
+        $this->call([
+            TaskSedeer::class,
+            
+        ]);
     }
 }
