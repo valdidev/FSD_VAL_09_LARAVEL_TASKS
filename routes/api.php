@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,12 @@ Route::post('/tasks', function () {
     return 'posts tasks';
 });
 
+Route::post('/task/create', [TaskController::class, 'createTask']);
+
 Route::put('/tasks', function () {
     return 'updating tasks';
 });
+
 
 Route::delete('/tasks', function () {
     return 'deleting tasks';
