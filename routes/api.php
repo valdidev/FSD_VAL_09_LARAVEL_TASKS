@@ -34,6 +34,6 @@ Route::delete('/tasks', function () {
     return 'deleting tasks';
 });
 
-Route::get('/tasks', function () {
-    return ['tasks to my tasks app'];
+Route::get('/task/{id}', function ($id) {
+    return ['see task id: '.$id];
 });
