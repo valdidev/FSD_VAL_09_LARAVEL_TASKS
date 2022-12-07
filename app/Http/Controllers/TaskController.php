@@ -19,7 +19,11 @@ class TaskController extends Controller
     {
         Log::info('Getting all tasks');
         try {
-            $tasks = DB::select('select * from tasks');
+            /* 3 ways to consult database */
+            // 1. SQL SENTENCE
+            // $tasks = DB::select('select * from tasks');
+            // 2. QUERY SENTENCE
+            $tasks = DB::table('tasks')->get();
 
             return response([
                 'success' => true,
